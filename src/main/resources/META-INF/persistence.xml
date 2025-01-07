@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+  version="3.0">
+  <persistence-unit name="Odo_Sistema_PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>lt.logica.Persona</class>
+    <class>lt.logica.Horario</class>
+    <class>lt.logica.Odontologo</class>
+    <class>lt.logica.Paciente</class>
+    <class>lt.logica.Responsable</class>
+    <class>lt.logica.Secretario</class>
+    <class>lt.logica.Turno</class>
+    <class>lt.logica.Usuario</class>
+    <properties>
+      <property name="jakarta.persistence.jdbc.url"
+        value="jdbc:sqlserver://localhost:1433;databaseName=Curso_Java;trustServerCertificate=true" />
+      <property name="jakarta.persistence.jdbc.user" value="sa" />
+      <property name="jakarta.persistence.jdbc.password" value="sistemas123" />
+      <property name="jakarta.persistence.jdbc.driver"
+        value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+      <property name="jakarta.persistence.schema-generation.database.action" value="create" />
+    </properties>
+  </persistence-unit>
+</persistence>
